@@ -18,8 +18,8 @@ const barChartOptions = {
     vAxis: {
       title: 'Money type',
     },
-    isStacked: true,
-    // isStacked: 'percent',
+    // isStacked: true,
+    isStacked: 'percent',
     ticks: [0, 0.2, 0.4, 0.6, 0.8, 1],
   },
 };
