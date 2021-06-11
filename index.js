@@ -1,5 +1,5 @@
 const barChartOptions = {
-  url: `https://api.delkos.com/api/v2/lifesaversentiment/sentiment?api_key=e7ca1635c516597b59845e6908bfc6cc48ab4e5df1d6da81664d6ed554fa6299&license=TYEqfDjJMVYU0aqJA0UykEpLzoiBK6hw`,
+  url: `https://api.delkos.com/api/v2/lifesaversentiment/sentiment?brandid=1&tickers=EURUSD,USDJPY,USDCAD,AUDUSD,USDCHF,GBPUSD,NZDUSD,XAUUSD,XAGUSD&license=TYEqfDjJMVYU0aqJA0UykEpLzoiBK6hw&api_key=e7ca1635c516597b59845e6908bfc6cc48ab4e5df1d6da81664d6ed554fa6299`,
   dataOption: {
     brandid: 1,
     orderBy: 'long', // 2. order by total / long / short
@@ -11,16 +11,21 @@ const barChartOptions = {
   chartOption: {
     title: "Country Money's Ratio",
     chartArea: { width: '80%' },
+    width: 600,
+    height: 400,
+    legend: { position: 'top', maxLines: 3 },
     hAxis: {
       title: 'Long - Short Ratio',
       minValue: 0,
+      ticks: [0, 0.2, 0.4, 0.6, 0.8, 1],
+      textStyle: { color: '#FF0000', fontName: 'Arial', fontSize: '14' },
     },
     vAxis: {
       title: 'Money type',
+      textStyle: { color: '#FFFF00', fontName: 'Arial', fontSize: '14' },
     },
     // isStacked: true,
     isStacked: 'percent',
-    ticks: [0, 0.2, 0.4, 0.6, 0.8, 1],
   },
 };
 
